@@ -1,0 +1,172 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff; 
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background: linear-gradient(135deg, #007bff, #28a745); 
+  color: #fff;
+  padding: 15px 0;
+  text-align: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logo img {
+  max-width: 120px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav ul li {
+  position: relative;/* Permet le positionnement du sous-menu */
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 18px;
+  display: block;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.2s;
+}
+
+nav ul li:hover a {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  transform: scale(1.05);
+}
+
+.submenu {
+  display: none;/* Cache le sous-menu par défaut */
+  position: absolute;/* Place le sous-menu sous l'élément parent */
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  min-width: 180px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 9999;
+}
+
+/* Changer la couleur des éléments du sous-menu au survol */
+.submenu li a {
+  color: #333;
+  padding: 10px;
+  display: block;
+  transition: background 0.3s;
+}
+
+
+.submenu li a:hover {
+  background: #007bff; /* Couleur de fond */
+  color: #fff; /* Couleur du texte */
+}
+
+/* Affiche le sous-menu lorsque la souris passe sur le parent */
+nav ul li:hover .submenu {
+  display: block; 
+}
+
+.container {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.menu-droit {
+  width: 250px;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0px 4px 6px rgba(0,0,0,0.2);
+  border-radius: 8px;
+  position: relative;
+}
+
+.menu-droit h2 {
+  color: #007bff; /* Bleu */
+  font-size: 18px;
+}
+
+.menu-droit ul {
+  padding: 0;
+  list-style: none;
+}
+
+.menu-droit ul li a {
+  color: #333;
+  text-decoration: none;
+  display: block;
+  padding: 5px 0;
+  transition: color 0.3s;
+}
+
+.menu-droit ul li a:hover {
+  color: #28a745; /* Vert */
+}
+
+main {
+  flex-grow: 1;
+  max-width: 800px;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+footer {
+  background-color: #f4f4f9; /* Gris très clair */
+  color: #333;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: auto;
+}
+
+/* Carrousel d'images */
+.carousel {
+  width: 100%;
+  max-width: 800px; /* Tu peux ajuster la largeur du carrousel */
+  overflow: hidden;
+  margin: 20px auto; /* Centrer le carrousel */
+  border-radius: 10px;
+}
+
+.carousel-images {
+  display: flex;
+  animation: slide 12s infinite; /* Animation pour faire défiler les images toutes les 12 secondes */
+}
+
+.carousel-images img {
+  width: 50%;
+  height: auto;
+  border-radius: 10px;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  33.33% {
+    transform: translateX(-100%);
+  }
+  66.66% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

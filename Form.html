@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription - Service Informatique</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Créer un compte</h2>
+    
+    
+    <form>
+            <label for="type">Je suis :</label>
+        <select id="type" name="type" required>
+            <option value="">Sélectionnez </option>
+            <option value="client">Client</option>
+            <option value="fournisseur">Fournisseur</option>
+            <option value="partenaire">Partenaire</option>
+        </select>
+
+        <label for="nom">Nom complet / Entreprise :</label>
+        <input type="text" id="nom" name="nom" placeholder="Votre nom ou nom d'entreprise" required>
+
+        <label for="email">Adresse e-mail :</label>
+        <input type="email" id="email" name="email" placeholder="Votre email" required>
+
+        <label for="telephone">Téléphone :</label>
+        <input type="tel" id="telephone" name="telephone" placeholder="Votre numéro de téléphone" required>
+
+        <label for="password">Mot de passe :</label>
+        <input type="password" id="password" name="password" placeholder="6 caractères minimum" minlength="6" required>
+
+        <button type="submit">S'inscrire</button>
+    </form>
+
+    <p class="login-link">Déjà un compte ? <a href="#">Connectez-vous</a></p>
+    <a href="page-acceuil.html"style="display: inline-block; padding: 10px 20px; background-color: #007bff; color: #fff; text-decoration: none; border-radius: 5px; transition: background 0.3s;">Retour</a>
+</div>
+        
+
+</body>
+</html>
